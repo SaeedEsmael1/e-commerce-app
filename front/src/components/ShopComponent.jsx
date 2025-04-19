@@ -20,6 +20,7 @@ import PopularPost4 from '../images/popular-posts/popular-post-4.jpg';
 const PRODUCTS_PER_PAGE = 10;
 
 import { CartShopContaxt } from '../App';
+import { NavLink } from 'react-router-dom';
 
 export const ShopComponent = () => {
   const { checkCartFound } = useContext(CartShopContaxt);
@@ -110,9 +111,12 @@ export const ShopComponent = () => {
                               key={product.id}
                             >
                               <div className="absolute z-10 transition-all duration-800 top-8 -right-10 flex flex-col gap-2 group-hover:right-5">
-                                <span className="bg-primary-color text-white-color px-1 cursor-pointer">
+                                <NavLink
+                                  to={`${product.slug}`}
+                                  className="bg-primary-color text-white-color px-1 cursor-pointer"
+                                >
                                   <FontAwesomeIcon icon={faEye} />
-                                </span>
+                                </NavLink>
                                 <span className="bg-primary-color text-white-color px-1 cursor-pointer">
                                   <FontAwesomeIcon icon={faHeart} />
                                 </span>

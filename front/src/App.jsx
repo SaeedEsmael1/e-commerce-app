@@ -8,6 +8,8 @@ import {
   Blog,
   About,
   Contact,
+  ShopSlug,
+  BlogSlug,
   NotFoundPage,
 } from './pages';
 import { createContext, useState } from 'react';
@@ -29,12 +31,20 @@ const route = createBrowserRouter([
         element: <Shop />,
       },
       {
+        path: '/shop/:slug',
+        element: <ShopSlug />,
+      },
+      {
         path: '/cart-shop',
         element: <CartShop />,
       },
       {
         path: '/blog',
         element: <Blog />,
+      },
+      {
+        path: '/blog/:slug',
+        element: <BlogSlug />,
       },
       {
         path: '/about',

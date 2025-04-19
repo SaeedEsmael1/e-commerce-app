@@ -8,6 +8,7 @@ import {
   faUpRightFromSquare,
   faComment,
 } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 export const BlogsComponent = () => {
   const fetchBlogs = async () => {
     const response = await fetch(`http://localhost:1337/api/blogs?populate=*`);
@@ -50,7 +51,7 @@ export const BlogsComponent = () => {
                       alt="Blog Image"
                     />
                     <h3 className="leading-6 text-xl font-medium mb-5 hover:text-primary-color transition-colors duration-300 cursor-pointer">
-                      {blog.blogName}
+                      <NavLink to={`${blog.slug}`}>{blog.blogName}</NavLink>
                     </h3>
                     <div className="flex justify-between items-center mb-5">
                       <div>
