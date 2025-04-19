@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-white-color: #fff;
+  --color-light-color: #eee;
+  --color-primary-color: #e94560;
+  --color-secondary-color: #f7ce26;
+  --color-light-dark: #111111b8;
+  --color-gray-color: #aaa;
+  --color-secondary-light-color: #fcce1094;
+  --color-dark-color: #222;
+}
+
+/* Target the whole scrollbar */
+.custom-scroll {
+  overflow-x: auto;
+}
+
+/* Scrollbar width */
+.custom-scroll::-webkit-scrollbar {
+  height: 20px; /* horizontal scrollbar */
+}
+
+/* Scrollbar track (background) */
+.custom-scroll::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* Scrollbar thumb (the draggable part) */
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-color);
+  border-radius: 15px;
+  box-shadow: 2px 2px 40px 10px var(--color-primary-color);
+}
+
+@keyframes pulseScale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.hover-pulse-on-hover:hover {
+  animation: pulseScale 1s ease-in-out infinite;
+}
