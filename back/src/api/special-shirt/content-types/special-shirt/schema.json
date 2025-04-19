@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "special_shirts",
+  "info": {
+    "singularName": "special-shirt",
+    "pluralName": "special-shirts",
+    "displayName": "special-shirts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

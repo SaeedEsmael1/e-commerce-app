@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_products",
+  "info": {
+    "singularName": "shop-product",
+    "pluralName": "shop-products",
+    "displayName": "shop-products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "brandName": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "brandName"
+    }
+  }
+}
