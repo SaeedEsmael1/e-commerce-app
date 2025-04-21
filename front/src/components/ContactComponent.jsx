@@ -89,7 +89,7 @@ const ContactComponent = () => {
             </div>
             <textarea
               placeholder="Your Message"
-              className="block my-5 resize-none w-[400px] h-[150px] outline-none border"
+              className="block my-5 resize-none w-[400px] max-w-full h-[150px] outline-none border"
             ></textarea>
             <button className="cursor-pointer bg-primary-color text-white py-2 px-4 rounded-md">
               Submit

@@ -7,8 +7,8 @@ export const AppImages = () => {
       <div className="container mx-auto">
         <div className="contnt">
           <div className="images flex justify-center items-center gap-5">
-            <img src={AppImage1} alt="" />
-            <img src={AppImage2} alt="" />
+            <img className="max-sm:w-[150px]" src={AppImage1} alt="" />
+            <img className="max-sm:w-[150px]" src={AppImage2} alt="" />
           </div>
         </div>
       </div>
